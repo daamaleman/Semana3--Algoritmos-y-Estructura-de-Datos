@@ -1,6 +1,6 @@
 # Leer x cantidad de edad y calcular la media
 
-class Edades:
+class Edad:
     def __init__(self, edades): # Constructor de la clase
         self.edades = edades # Atributo de la clase
 
@@ -23,9 +23,12 @@ def main():
         except ValueError:
             print("Error: Ingrese un número entero válido.")
         
-    
-    edades_obj = Edades(edades) # Crea un objeto de la clase Edades
-    print(edades_obj.mostar_media()) # Muestra la media de las edades
+    if( not edades):
+        print("No se ingresaron edades.")
+        return
+    else:
+        edades_obj = Edad(edades) # Crea un objeto de la clase Edades
+        print(edades_obj.mostar_media()) # Muestra la media de las edades
     
 if __name__ == "__main__":
     main() # Llama a la función main cuando se ejecuta el script
